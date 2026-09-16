@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smart Work Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Smart Work Tracker</h1>
+
+<div class="nav">
+
+    <!--  total task-->
+<div id="total"></div>  
+    <!-- total to-do-->
+<div id="do"></div>
+    <!-- total progres -->
+<div id="progress"></div>
+    <!-- completed total-->
+<div id="Completed"></div>
+</div>
+<!--  search/filterss  -->
+    <h2>Search & Filters</h2>
+    <input type="text" id="search" placeholder="Search tasks">
+    <select id="searchBy">
+        <option value="id">ID</option>
+        <option value="title">Title</option>
+        <option value="assignee">Assignee</option>
+        <option value="status">Status</option>
+        <option value="priority">Priority</option>
+        <option value="tags">Tags</option>
+    </select>
+    <select id="value">
+        <option value="">Select</option>
+    </select>
+    <button id="filterBtn">Apply Filter</button>
+<br><br>
+ <!-- tableeee  -->
+<table>
+    <thead>
+        <tr>
+            <th>Task ID</th>
+            <th>Title</th>
+            <th>Assignee</th>
+            <th>Status</th>
+            <th>Priority</th>
+            <th>Tags</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="show"></tbody>
+</table>
+<br>
+<div class="box">
+<h2>Add New Task</h2>
+<form id="taskForm">
+    <label for="TaskID">TaskID : </label>
+    <input type="number" id="TaskId" placeholder="ID">
+    <br><br>
+<label for="title">Title : </label>
+    <input type="text" id="title" placeholder="Title">
+    <br><br>
+<label for="Assignee">Assignee:</label>
+    <input type="text" id="assignee" placeholder="Assignee">
+    <br><br>
+<label for="status">Status : </label>
+    <select id="status">
+        <option value="Todo">Todo</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+    </select>
+    <br><br>
+ <label for="priority">Priority : </label>
+    <select id="priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+    </select>
+    <br><br>
+ <label for="tags">Tags : </label>
+    <input type="text" id="tags" placeholder="Frontend, React">
+    <br><br>
+    <button type="submit">Add Task</button>
+</form>
+</div>
+<script src="task.js"></script>
+</body>
+</html>
